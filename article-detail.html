@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHETYPE - Le Minimalisme et la Lumière | Tadao Ando</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            background-color: #f5f0e8;
+        }
+
+        .card {
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(44, 36, 24, 0.15);
+        }
+
+        article h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2c2418;
+            margin-bottom: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        article h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c2418;
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        article p {
+            color: #5a4a35;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        article ul {
+            color: #5a4a35;
+            line-height: 1.8;
+            list-style: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        article blockquote {
+            border-left: 3px solid #c4a77d;
+            padding-left: 1rem;
+            font-style: italic;
+            color: #5a4a35;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+    <header style="background-color: #2c2418; border-bottom: 1px solid #d4c5a9; position: sticky; top: 0; z-index: 50;">
+        <div class="container mx-auto px-6 py-5">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-center md:text-left">
+                    <h1 class="text-3xl font-bold tracking-wide" style="color: #e8dcc8;">ARCHETYPE</h1>
+                    <p class="text-sm mt-1" style="color: #b8a88a;">Encyclopédie thématique de l'architecture moderne et
+                        contemporaine</p>
+                </div>
+                <div class="flex items-center gap-4 w-full md:w-auto">
+                    <div class="relative flex-1 md:w-96">
+                        <input type="text" placeholder="Rechercher un style, architecture, bâtiment..."
+                            aria-label="Champ de recherche"
+                            class="w-full px-4 py-2 pr-10 rounded-none focus:outline-none focus:ring-1"
+                            style="background-color: #f5f0e8; border: 1px solid #d4c5a9; color: #2c2418;">
+                        <svg class="absolute right-3 top-2.5 w-5 h-5" style="color: #8b7a62;" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav aria-label="Navigation principale" style="border-top: 1px solid #d4c5a9; background-color: #322a1e;">
+            <div class="container mx-auto px-6">
+                <div class="flex gap-8">
+                    <a href="index.html" class="py-3 text-sm font-medium hover:opacity-80"
+                        style="color: #b8a88a;">Accueil</a>
+                    <a href="articles.html" class="py-3 text-sm font-medium hover:opacity-80"
+                        style="color: #b8a88a;">Liste des articles</a>
+                    <a href="article-detail.html" class="py-3 text-sm font-medium"
+                        style="color: #e8dcc8; border-bottom: 2px solid #c4a77d;" aria-current="page">Article
+                        détaillé</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-10 flex-1">
+
+        <div class="grid lg:grid-cols-3 gap-10">
+
+            <div class="lg:col-span-2">
+
+                <div class="mb-8" style="background: linear-gradient(135deg, #2c2418 0%, #5a4a35 100%);">
+                    <div class="px-8 py-14">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider"
+                                style="background-color: rgba(196,167,125,0.3); color: #c4a77d;">Minimalisme</span>
+                            <span class="text-xs" style="color: #b8a88a;">· 8 min de lecture</span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold leading-snug"
+                            style="color: #e8dcc8; font-family: 'Playfair Display', serif;">
+                            LE MINIMALISME ET LA LUMIÈRE :<br>L'HÉRITAGE DE TADAO ANDO
+                        </h2>
+                        <div class="mt-4 flex items-center gap-4 text-xs" style="color: #b8a88a;">
+                            <span>Par la rédaction ARCHETYPE</span>
+                            <span>·</span>
+                            <span>Publié en 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <figure class="mb-8">
+                    <div class="overflow-hidden" style="border: 1px solid #d4c5a9;">
+                        <img src="images/77.jpg"
+                            alt="La Chapelle de la Lumière à Osaka (1989), œuvre emblématique de Tadao Ando"
+                            class="w-full h-80 object-cover">
+                    </div>
+                    <figcaption class="mt-2 text-xs text-center" style="color: #8b7a62;">
+                        La Chapelle de la Lumière, Ibaraki, Osaka (1989) — Tadao Ando
+                    </figcaption>
+                </figure>
+
+                <article>
+                    <h2>Introduction</h2>
+                    <p>Tadao Ando, architecte autodidacte japonais né en 1941 à Osaka, est l'une des figures les plus
+                        influentes de l'architecture contemporaine. Récompensé par le Prix Pritzker en 1995, il a
+                        développé un langage architectural unique fondé sur l'alliance du béton brut, de la nature et de
+                        la lumière naturelle.</p>
+
+                    <h2>La philosophie de la lumière</h2>
+                    <p>Chez Tadao Ando, la lumière n'est jamais un simple outil technique : elle est le matériau
+                        principal de l'architecture.</p>
+                    <blockquote>« La lumière donne forme à l'espace. Je veux créer une architecture où la lumière est le
+                        matériau principal. » — Tadao Ando</blockquote>
+                    <p>La <strong>Chapelle de la Lumière</strong> (1989), à Ibaraki, reste son œuvre la plus
+                        emblématique.</p>
+
+                    <h2>Le béton comme matériau poétique</h2>
+                    <p>Contrairement à l'image froide que peut évoquer le béton, Ando l'utilise avec une précision et
+                        une sensibilité extrêmes.</p>
+                    <ul>
+                        <li>Des joints réguliers créent un rythme subtil</li>
+                        <li>La couleur naturelle du béton varie selon le jour</li>
+                        <li>Les imperfections sont intégrées à l'esthétique</li>
+                    </ul>
+
+                    <h2>L'héritage contemporain</h2>
+                    <p>L'influence de Tadao Ando sur l'architecture contemporaine est considérable. Des générations
+                        d'architectes ont intégré ses leçons : la modestie des moyens et le respect du lieu.</p>
+
+                    <div class="mt-10 pt-6" style="border-top: 1px solid #d4c5a9;">
+                        <p class="text-xs font-semibold mb-3 uppercase tracking-wider" style="color: #8b7a62;">Mots-clés
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-xs"
+                                style="background-color: #d4c5a9; color: #2c2418;">Minimalisme</span>
+                            <span class="px-3 py-1 text-xs" style="background-color: #d4c5a9; color: #2c2418;">Tadao
+                                Ando</span>
+                            <span class="px-3 py-1 text-xs" style="background-color: #d4c5a9; color: #2c2418;">Béton
+                                brut</span>
+                            <span class="px-3 py-1 text-xs" style="background-color: #d4c5a9; color: #2c2418;">Lumière
+                                naturelle</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <aside aria-label="Articles connexes" class="lg:col-span-1">
+                <div class="p-6 mb-6 sticky top-28" style="background-color: #e8dcc8; border: 1px solid #d4c5a9;">
+                    <h4 class="font-bold mb-4 text-xs uppercase tracking-widest" style="color: #8b7a62;">À PROPOS DE CET
+                        ARTICLE</h4>
+                    <dl class="space-y-3 text-sm">
+                        <div>
+                            <dt class="text-xs uppercase tracking-wider mb-1" style="color: #8b7a62;">Catégorie</dt>
+                            <dd style="color: #2c2418;">Minimalisme</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs uppercase tracking-wider mb-1" style="color: #8b7a62;">Période</dt>
+                            <dd style="color: #2c2418;">1970 — Aujourd'hui</dd>
+                        </div>
+                    </dl>
+                </div>
+
+
+            </aside>
+        </div>
+    </main>
+
+    <footer class="mt-16 py-8" style="background-color: #2c2418; border-top: 1px solid #d4c5a9;">
+        <div class="container mx-auto px-6 text-center text-sm" style="color: #b8a88a;">
+            <p>© ARCHETYPE, Cité des Arts — Encyclopédie numérique d'architecture moderne et contemporaine</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

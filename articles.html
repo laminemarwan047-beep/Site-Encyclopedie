@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHETYPE - Liste des articles | Encyclopédie d'architecture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            background-color: #f5f0e8;
+        }
+
+        .card {
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(44, 36, 24, 0.15);
+        }
+
+
+#cat-cartes:checked ~ main .grid article:not(.cat-cartes),
+#cat-minimalisme:checked ~ main .grid article:not(.cat-minimalisme),
+#cat-eco:checked ~ main .grid article:not(.cat-eco),
+#cat-modernisme:checked ~ main .grid article:not(.cat-modernisme),
+#cat-brutalisme:checked ~ main .grid article:not(.cat-brutalisme),
+#cat-futurisme:checked ~ main .grid article:not(.cat-futurisme) {
+    display: none;
+}
+
+
+
+#tous:checked ~ main label[for="tous"],
+#cat-cartes:checked ~ main label[for="cat-cartes"],
+#cat-minimalisme:checked ~ main label[for="cat-minimalisme"],
+#cat-eco:checked ~ main label[for="cat-eco"],
+#cat-modernisme:checked ~ main label[for="cat-modernisme"],
+#cat-brutalisme:checked ~ main label[for="cat-brutalisme"],
+#cat-futurisme:checked ~ main label[for="cat-futurisme"] {
+    font-weight: bold;
+    color: #2c2418;
+    border-left: 3px solid #c4a77d;
+    padding-left: 8px;
+}
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+    <input type="radio" id="tous" name="filtre" class="hidden" checked>
+    <input type="radio" id="cat-cartes" name="filtre" class="hidden">
+    <input type="radio" id="cat-minimalisme" name="filtre" class="hidden">
+    <input type="radio" id="cat-eco" name="filtre" class="hidden">
+    <input type="radio" id="cat-modernisme" name="filtre" class="hidden">
+    <input type="radio" id="cat-brutalisme" name="filtre" class="hidden">
+    <input type="radio" id="cat-futurisme" name="filtre" class="hidden">
+
+    <header style="background-color: #2c2418; border-bottom: 1px solid #d4c5a9; position: sticky; top: 0; z-index: 50;">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-center md:text-left">
+                    <h1 class="text-3xl font-bold tracking-wide" style="color: #e8dcc8;">ARCHETYPE</h1>
+                    <p class="text-sm mt-1" style="color: #b8a88a;">Encyclopédie thématique de l'architecture</p>
+                </div>
+                <div class="relative w-full md:w-96">
+                    <input type="text" placeholder="Rechercher..."
+                        class="w-full px-4 py-2 bg-[#f5f0e8] border border-[#d4c5a9] outline-none">
+                </div>
+            </div>
+        </div>
+        <nav style="border-top: 1px solid #d4c5a9; background-color: #322a1e;">
+            <div class="container mx-auto px-6 flex gap-8">
+                <a href="index.html" class="py-3 text-sm font-medium hover:text-white"
+                    style="color: #b8a88a;">Accueil</a>
+                <a href="articles.html" class="py-3 text-sm font-medium"
+                    style="color: #e8dcc8; border-bottom: 2px solid #c4a77d;">Liste des articles</a>
+                <a href="article-detail.html" class="py-3 text-sm font-medium hover:text-white"
+                    style="color: #b8a88a;">Article détaillé</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 flex-1">
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold" style="color: #2c2418;">LISTE DES ARTICLES</h2>
+            <div class="w-20 h-0.5 mt-2" style="background-color: #c4a77d;"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-4 gap-8">
+            <aside class="lg:col-span-1">
+                <div class="p-6 sticky top-32" style="background-color: #e8dcc8; border: 1px solid #d4c5a9;">
+                    <h4 class="font-bold mb-4 text-xs tracking-widest text-[#2c2418]">NAVIGATION / FILTRES</h4>
+
+                    <div class="space-y-4">
+                        <label for="tous" class="block text-sm cursor-pointer transition-all hover:text-[#c4a77d]"
+                            style="color: #5a4a35;">
+                            TOUT AFFICHER
+                        </label>
+
+                        <div class="h-px bg-[#d4c5a9] w-full"></div>
+
+                        <label for="cat-cartes" class="block text-sm cursor-pointer transition-all hover:text-[#c4a77d]"
+                            style="color: #5a4a35;">CARTES & URBANISME</label>
+                        <label for="cat-minimalisme"
+                            class="block text-sm cursor-pointer transition-all hover:text-[#c4a77d]"
+                            style="color: #5a4a35;">MINIMALISME</label>
+                        <label for="cat-eco" class="block text-sm cursor-pointer transition-all hover:text-[#c4a77d]"
+                            style="color: #5a4a35;">ÉCO-CONCEPTION</label>
+                        <label for="cat-modernisme"
+                            class="block text-sm cursor-pointer transition-all hover:text-[#c4a77d]"
+                            style="color: #5a4a35;">MODERNISME</label>
+                        <label for="cat-brutalisme"
+                            class="block text-sm cursor-pointer transition-all hover:text-[#c4a77d]"
+                            style="color: #5a4a35;">BRUTALISME</label>
+                        <label for="cat-futurisme"
+                            class="block text-sm cursor-pointer transition-all hover:text-[#c4a77d]"
+                            style="color: #5a4a35;">FUTURISME</label>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="lg:col-span-3">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+                    <article class="cat-cartes card group"
+                        style="background-color: #e8dcc8; border: 1px solid #d4c5a9;">
+                        <img src="images/11.jpg" class="h-48 w-full object-cover">
+                        <div class="p-5">
+                            <span class="text-[10px] px-2 py-0.5 bg-[#c4a77d] text-white">URBANISME</span>
+                            <h3 class="font-bold text-lg my-2">L'Influence de la Cartographie</h3>
+                            <a href="#" class="text-xs font-bold text-[#8b7a62]">DÉCOUVRIR →</a>
+                        </div>
+                    </article>
+
+                    <article class="cat-minimalisme card group"
+                        style="background-color: #e8dcc8; border: 1px solid #d4c5a9;">
+                        <img src="images/22.jpg" class="h-48 w-full object-cover">
+                        <div class="p-5">
+                            <span class="text-[10px] px-2 py-0.5 bg-[#8b7a62] text-white">MINIMALISME</span>
+                            <h3 class="font-bold text-lg my-2">Le Minimalisme et la Lumière</h3>
+                            <a href="#" class="text-xs font-bold text-[#8b7a62]">DÉCOUVRIR →</a>
+                        </div>
+                    </article>
+
+                    <article class="cat-eco card group" style="background-color: #e8dcc8; border: 1px solid #d4c5a9;">
+                        <img src="images/33.jpg" class="h-48 w-full object-cover">
+                        <div class="p-5">
+                            <span class="text-[10px] px-2 py-0.5 bg-[#6b8f71] text-white">ÉCO</span>
+                            <h3 class="font-bold text-lg my-2">Architecture Durable</h3>
+                            <a href="#" class="text-xs font-bold text-[#8b7a62]">DÉCOUVRIR →</a>
+                        </div>
+                    </article>
+
+                    <article class="cat-modernisme card group"
+                        style="background-color: #e8dcc8; border: 1px solid #d4c5a9;">
+                        <img src="images/44.jpg" class="h-48 w-full object-cover">
+                        <div class="p-5">
+                            <span class="text-[10px] px-2 py-0.5 bg-[#7a6a8a] text-white">MODERNISME</span>
+                            <h3 class="font-bold text-lg my-2">Architecture Hollandaise</h3>
+                            <a href="#" class="text-xs font-bold text-[#8b7a62]">DÉCOUVRIR →</a>
+                        </div>
+                    </article>
+
+                    <article class="cat-brutalisme card group"
+                        style="background-color: #e8dcc8; border: 1px solid #d4c5a9;">
+                        <img src="images/55.jpg" class="h-48 w-full object-cover">
+                        <div class="p-5">
+                            <span class="text-[10px] px-2 py-0.5 bg-[#8a6a5a] text-white">BRUTALISME</span>
+                            <h3 class="font-bold text-lg my-2">Le Brutalisme revisité</h3>
+                            <a href="#" class="text-xs font-bold text-[#8b7a62]">DÉCOUVRIR →</a>
+                        </div>
+                    </article>
+
+                    <article class="cat-futurisme card group"
+                        style="background-color: #e8dcc8; border: 1px solid #d4c5a9;">
+                        <img src="images/66.jpg" class="h-48 w-full object-cover">
+                        <div class="p-5">
+                            <span class="text-[10px] px-2 py-0.5 bg-[#5a6a8a] text-white">FUTURISME</span>
+                            <h3 class="font-bold text-lg my-2">Utopies Urbaines</h3>
+                            <a href="#" class="text-xs font-bold text-[#8b7a62]">DÉCOUVRIR →</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-16 py-8" style="background-color: #2c2418; border-top: 1px solid #d4c5a9;">
+        <div class="container mx-auto px-6 text-center text-sm" style="color: #b8a88a;">
+            <p>© ARCHETYPE, Cité des Arts — Encyclopédie numérique d'architecture</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
