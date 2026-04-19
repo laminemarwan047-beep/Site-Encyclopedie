@@ -23,4 +23,6 @@ detail.html : Page de détail d’un article
 * Tailwind CSS 
 
 ##  Déploiement
-Le projet est consultable en ligne ici : [LIEN_GITHUB_PAGES_A_VENIR]
+Lien du depôt sur GITHUB : https://github.com/laminemarwan047-beep/Site-Encyclopedie.git
+
+Le projet est consultable en ligne ici : 
