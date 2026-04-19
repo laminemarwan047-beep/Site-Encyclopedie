@@ -25,4 +25,4 @@ detail.html : Page de détail d’un article
 ##  Déploiement
 Lien du depôt sur GITHUB : https://github.com/laminemarwan047-beep/Site-Encyclopedie.git
 
-Le projet est consultable en ligne ici : 
+Le projet est consultable en ligne ici : https://laminemarwan047-beep.github.io/Site-Encyclopedie/
